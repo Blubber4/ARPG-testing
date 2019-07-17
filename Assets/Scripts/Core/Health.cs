@@ -6,6 +6,7 @@ namespace RPG.Core
 {
     public class Health : MonoBehaviour
     {
+        // config params
         [SerializeField] float healthPoints = 100f;
 
         bool isDead = false;

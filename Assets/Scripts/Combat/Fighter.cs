@@ -17,8 +17,8 @@ namespace RPG.Combat
         Mover mover;
         ActionScheduler actionScheduler;
         Animator animator;
-
         Health target;
+
         float timeSinceLastAttack = Mathf.Infinity;
 
         private void Start()

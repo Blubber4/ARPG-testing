@@ -26,7 +26,6 @@ namespace RPG.Control
         Mover mover;
         GameObject player;
 
-        // instance variables
         Vector3 guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         int currentWaypointIndex = 0;
