@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using RPG.Core;
 using RPG.Movement;
 using RPG.Combat;
-using System;
 
 namespace RPG.Control
 {

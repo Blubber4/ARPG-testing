@@ -1556,15 +1556,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2294286961067056917, guid: 14521b4563f0f6944bdd610c86c66a99,
-        type: 3}
-      propertyPath: sceneIndexToLoad
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4386179194449614319, guid: 14521b4563f0f6944bdd610c86c66a99,
         type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294286961067056917, guid: 14521b4563f0f6944bdd610c86c66a99,
+        type: 3}
+      propertyPath: sceneIndexToLoad
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4319838125345304832, guid: 14521b4563f0f6944bdd610c86c66a99,
         type: 3}
