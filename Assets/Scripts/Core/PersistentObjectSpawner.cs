@@ -2,7 +2,7 @@
 
 namespace RPG.Core
 {
-    // this class in order to avoid singleton pattern with Fader
+    // this class in order to avoid messy singleton patterns
     public class PersistentObjectSpawner : MonoBehaviour
     {
         // config params

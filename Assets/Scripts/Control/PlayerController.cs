@@ -17,7 +17,7 @@ namespace RPG.Control
         void Update()
         {
             if (health.IsDead()) return;
-            if (InteractWithCombat()) return; // prevent walking into enemies when already in range to attack by checking if we've interacted with combat before movement is called
+            if (InteractWithCombat()) return; // in order to prevent walking into enemies when already in range to attack, need to check if we've interacted with combat before moving
             if (InteractWithMovement()) return;
             print("Nothing to do");
         }
@@ -46,8 +46,8 @@ namespace RPG.Control
         private bool InteractWithMovement()
         {
             RaycastHit hit;
-            bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
-            if (hasHit)
+            bool hasHit = Physics.Raycast(GetMouseRay(), out hit); // currently, clicking on the player will attempt to move to the player's hitbox.
+            if (hasHit)                                            // should make this a foreach similar to combat, and ignore player hit to allow clicking behind player model
             {
                 if (Input.GetMouseButton(1))
                 {
