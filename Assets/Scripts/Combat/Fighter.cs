@@ -10,6 +10,9 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float attackSpeed = .5f;
         [SerializeField] float weaponDamage = 5f;
+        [SerializeField] GameObject weaponPrefab = null;
+        [SerializeField] Transform handTransform = null;
+        [SerializeField] AnimatorOverrideController weaponOverride = null;
 
         // cached references
         Mover mover;
@@ -24,6 +27,11 @@ namespace RPG.Combat
             mover = GetComponent<Mover>();
             actionScheduler = GetComponent<ActionScheduler>();
             animator = GetComponent<Animator>();
+        }
+
+        private void Start()
+        {
+            SpawnWeapon();
         }
 
         private void Update()
@@ -42,6 +50,13 @@ namespace RPG.Combat
                 mover.Cancel();
                 AttackBehavior();
             }
+        }
+
+        public void SpawnWeapon()
+        {
+            Instantiate(weaponPrefab, handTransform);
+            Animator animator = GetComponent<Animator>();
+            animator.runtimeAnimatorController = weaponOverride;
         }
 
         private void AttackBehavior()
