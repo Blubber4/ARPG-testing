@@ -56,3 +56,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f178f439f214ce742accc6e6cf4c1bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeInTime: 2
