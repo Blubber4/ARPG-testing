@@ -54,7 +54,9 @@ MonoBehaviour:
   chaseDistance: 5
   suspicionTime: 5
   waypointTolerance: 1
+  waypointDwellTime: 3
   patrolPath: {fileID: 0}
+  patrolSpeedMultiplier: 0.2
 --- !u!1001 &4830301913199672580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,6 +114,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &4830301913199192584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 4830301913199672580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4830301913199249930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 4830301913199672580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5575773477525693367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -188,6 +202,33 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a8a3c63d90370a4d9f740323ad42b25,
+        type: 2}
+    - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 4830301913199249930}
+    - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a8a3c63d90370a4d9f740323ad42b25,
+        type: 2}
+    - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 4830301913199192584}
+    - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 4830301913199249930}
     m_RemovedComponents:
     - {fileID: 5137669148221775576, guid: a8b67ac447692784a9c819d5a87b04f7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8b67ac447692784a9c819d5a87b04f7, type: 3}
