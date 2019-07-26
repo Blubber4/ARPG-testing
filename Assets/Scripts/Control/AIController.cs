@@ -118,7 +118,7 @@ namespace RPG.Control
             return distanceToPlayer < chaseDistance;
         }
 
-        // called by unity, not in code
+        // called by unity to show chase distance visually, not called in code
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.blue;

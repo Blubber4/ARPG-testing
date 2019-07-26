@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Blue Bow
   m_EditorClassIdentifier: 
   weaponDamage: 10
-  weaponRange: 10
+  weaponRange: 11
   equippedPrefab: {fileID: 792186379252068764, guid: fed3bcf401418d24b8ae2536d00ff8e2,
     type: 3}
   animatorOverride: {fileID: 22100000, guid: d996223ec590f7a418f979745fa1f19f, type: 2}
   isRightHanded: 0
-  projectile: {fileID: 8796480352875107996, guid: c80f755b7a92e2348bbaeb5bf3b6edab,
+  projectile: {fileID: 7913783979704708424, guid: 3075c5b78240c104680faa8227d6ae5e,
     type: 3}

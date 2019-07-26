@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Red Bow
   m_EditorClassIdentifier: 
   weaponDamage: 10
-  weaponRange: 10
+  weaponRange: 12
   equippedPrefab: {fileID: 792186379252068764, guid: fed3bcf401418d24b8ae2536d00ff8e2,
     type: 3}
   animatorOverride: {fileID: 22100000, guid: d996223ec590f7a418f979745fa1f19f, type: 2}
   isRightHanded: 0
-  projectile: {fileID: 1672169975401428160, guid: 3f4bd2251de0d554b9d9b4b0f10922d7,
+  projectile: {fileID: 460724604930570472, guid: 617bcd2a8d403f340b1572b581613b0b,
     type: 3}

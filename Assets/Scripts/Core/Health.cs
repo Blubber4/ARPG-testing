@@ -32,6 +32,11 @@ namespace RPG.Core
             isDead = true;
             GetComponent<Animator>().SetTrigger("die"); // cache animator?
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            CapsuleCollider capsuleCollider = GetComponent<CapsuleCollider>();
+            if (capsuleCollider != null)
+            {
+                capsuleCollider.enabled = false;
+            }
         }
 
         public object CaptureState()

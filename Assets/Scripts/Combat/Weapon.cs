@@ -14,18 +14,44 @@ namespace RPG.Combat
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
 
+        const string weaponName = "Weapon";
+
         public void Spawn(Transform rightHand, Transform leftHand, Animator animator)
         {
+            DestroyOldWeapon(rightHand, leftHand);
+
             if (equippedPrefab != null)
             {
                 Transform handTransform = GetHandTransform(rightHand, leftHand);
-                Instantiate(equippedPrefab, handTransform);
+                GameObject weapon = Instantiate(equippedPrefab, handTransform);
+                weapon.name = weaponName;
             }
-            
+
             if (animatorOverride != null)
             {
                 animator.runtimeAnimatorController = animatorOverride;
             }
+            else
+            {
+                var overrideController = animatorOverride.runtimeAnimatorController as AnimatorOverrideController; // null if default, value of current override if not
+                if (overrideController != null)
+                {
+                    animatorOverride.runtimeAnimatorController = overrideController.runtimeAnimatorController; // restore to default
+                }
+            }
+        }
+
+        private void DestroyOldWeapon(Transform rightHand, Transform leftHand) // this function will be a problem if shields are added later. Maybe this whole class tbh.
+        {
+            Transform oldWeapon = rightHand.Find(weaponName);
+            if (oldWeapon == null)
+            {
+                oldWeapon = leftHand.Find(weaponName);
+            }
+            if (oldWeapon == null) return;
+
+            oldWeapon.name = "DESTROYING"; // to avoid confusion with which weapon to destroy, one in hand or one just picked up, if call order isn't right
+            Destroy(oldWeapon.gameObject);
         }
 
         private Transform GetHandTransform(Transform rightHand, Transform leftHand)
