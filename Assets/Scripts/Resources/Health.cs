@@ -16,7 +16,7 @@ namespace RPG.Resources
 
         private void Awake()
         {
-            maxHealth = GetComponent<BaseStats>().GetHealth();
+            maxHealth = GetComponent<BaseStats>().GetStat(Stat.Health);
             healthPoints = maxHealth;
         }
 
@@ -40,7 +40,7 @@ namespace RPG.Resources
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) return;
 
-            experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
+            experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
         }
 
         public float GetHealth()
