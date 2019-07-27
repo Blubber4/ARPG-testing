@@ -59,7 +59,7 @@ MonoBehaviour:
   lifeAfterImpactQuick: 0.03
   destroyExtended:
   - {fileID: 4289296242451860356}
-  lifeAfterImpactExtended: 10
+  lifeAfterImpactExtended: 2
 --- !u!65 &-286972651729423431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4894,6 +4894,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: lengthInSec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -4937,38 +4969,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: lengthInSec
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab1112643ee572748b01dede71158272, type: 3}

@@ -108,6 +108,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8687263066731455443, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: startingLevel
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
         type: 3}
       propertyPath: attackSpeed

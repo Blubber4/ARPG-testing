@@ -55,7 +55,7 @@ MonoBehaviour:
   - {fileID: 1980668837126801306}
   destroyQuick:
   - {fileID: 0}
-  lifeAfterImpactQuick: 0.01
+  lifeAfterImpactQuick: 0
   destroyExtended: []
   lifeAfterImpactExtended: 0
 --- !u!65 &-286972651729423431

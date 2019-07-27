@@ -14,19 +14,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &733394807326031215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804720968322279767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de3a44ab72d3b8748b70cd99cbf26bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 20
 --- !u!114 &4866743850391590899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +189,11 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -8687263066731455443, guid: a8b67ac447692784a9c819d5a87b04f7,
+        type: 3}
+      propertyPath: characterClass
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1909881126496128601, guid: a8b67ac447692784a9c819d5a87b04f7,
         type: 3}
       propertyPath: weapon
@@ -229,8 +221,7 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 4830301913199249930}
-    m_RemovedComponents:
-    - {fileID: 5137669148221775576, guid: a8b67ac447692784a9c819d5a87b04f7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8b67ac447692784a9c819d5a87b04f7, type: 3}
 --- !u!1 &804720968322279767 stripped
 GameObject:
