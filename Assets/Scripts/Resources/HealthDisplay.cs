@@ -13,7 +13,7 @@ namespace RPG.Resources
             AsBarOnly,
         }
 
-        // cached references
+        // cached references - cached references should be assigned in Awake() of child class
         protected Health health;
         protected Text healthText;
 
@@ -22,6 +22,12 @@ namespace RPG.Resources
 
         protected virtual void Update()
         {
+            if (health == null || healthText == null)
+            {
+                Debug.LogError("Child class of HealthDisplay has not cached health or healthText properly. Try assigning in Awake().");
+                return;
+            }
+
             ShowHealthBar();
             /* 
             if (oldDisplayMode != displayMode)
@@ -42,7 +48,6 @@ namespace RPG.Resources
             {
                 ShowPercentHealth();
             }
-
             //oldDisplayMode = displayMode;
         }
 
@@ -70,7 +75,7 @@ namespace RPG.Resources
 
         private void ShowPercentHealth()
         {
-            healthText.text = String.Format("Health: {0:0}%", health.GetPercentHealth());
+            healthText.text = String.Format("{0:0}%", health.GetPercentHealth());
         }
     }
 }

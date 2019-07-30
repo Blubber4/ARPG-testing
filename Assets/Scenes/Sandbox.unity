@@ -2904,6 +2904,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6870149602202964017, guid: a9bea015028949b4f9bfac67386a921d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43.69995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384762300293453599, guid: a9bea015028949b4f9bfac67386a921d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43.69995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1691076309805023312, guid: a9bea015028949b4f9bfac67386a921d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -61.100098
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9bea015028949b4f9bfac67386a921d, type: 3}
 --- !u!1001 &6112583875369874374

@@ -2,20 +2,23 @@
 using RPG.Saving;
 using RPG.Stats;
 using RPG.Core;
-using System;
 
 namespace RPG.Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
         // config params
-        [SerializeField] float healthPoints = 100f; // serialized for troubleshooting
+        float healthPoints = -1f; // serialized for troubleshooting
 
         float maxHealth;
         bool isDead = false;
 
         private void Awake()
         {
+            if (healthPoints < 0)
+            {
+                healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            }
             maxHealth = GetComponent<BaseStats>().GetStat(Stat.Health);
             healthPoints = maxHealth;
         }

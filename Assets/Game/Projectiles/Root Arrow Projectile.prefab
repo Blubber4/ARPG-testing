@@ -50,12 +50,12 @@ MonoBehaviour:
   isHoming: 0
   hitEffect: {fileID: 333036470493700559, guid: dfb5996b8925cfa4fb74f7ac160c0650,
     type: 3}
-  maxLifeTime: 10
+  maxLifeTime: 1
   destroyOnHit:
   - {fileID: 1980668837126801306}
   destroyQuick:
-  - {fileID: 0}
-  lifeAfterImpactQuick: 0
+  - {fileID: 6356649823438785222}
+  lifeAfterImpactQuick: 0.01
   destroyExtended: []
   lifeAfterImpactExtended: 0
 --- !u!65 &-286972651729423431

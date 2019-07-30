@@ -31,8 +31,8 @@ namespace RPG.Control
         void Update()
         {
             if (playerHealth.IsDead()) return;
-            if (InteractWithCombat()) return; // in order to prevent walking into enemies when already in range to attack, need to check if we've interacted with combat before moving
-            if (AttackMove()) return; // attack move behavior should still attack the enemy if we click one directly
+            if (InteractWithCombat()) return; // to prevent walking into enemies when already in attack range, interact with combat before movement
+            if (AttackMove()) return;
             if (InteractWithMovement()) return;
             print("Nothing to do");
         }
@@ -82,7 +82,6 @@ namespace RPG.Control
                 // TODO: change cursor to reflect attack move, change back when attack move is done.
                 isAttackMove = true;
                 isFirstClick = true;
-                print("Attack move activated");
                 return true;
             }
             if (!isAttackMove) return false;
@@ -97,7 +96,6 @@ namespace RPG.Control
 
             if (isFirstClick && Input.GetMouseButton(0))
             {
-                print(attackMovePosition);
                 CreateAttackMove();
                 return true;
             }
@@ -116,11 +114,11 @@ namespace RPG.Control
             RaycastHit hit;
             bool onHit = Physics.Raycast(GetMouseRay(), out hit);
 
-            Vector3 playerPosition = gameObject.transform.position;
+            Vector3 characterPosition = gameObject.transform.position;
             float weaponRange = playerFighter.GetEquippedWeapon().GetRange();
 
             // if hit is in attack range, check for enemy closest to that point and begin attacking them
-            if (onHit && Vector3.Distance(playerPosition, hit.point) < weaponRange)
+            if (onHit && Vector3.Distance(characterPosition, hit.point) < weaponRange)
             {
                 CombatTarget closestTarget = GetClosestTarget(hit.point, weaponRange);
                 if (closestTarget != null)
