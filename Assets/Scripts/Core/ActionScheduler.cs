@@ -8,7 +8,7 @@ namespace RPG.Core
 
         public void StartAction(IAction action)
         {
-            if (currentAction == action) return; // current action type has not changed, so don't cancel
+            if (currentAction == action) return; // current action type has not changed
             if (currentAction != null)
             {
                 currentAction.Cancel();

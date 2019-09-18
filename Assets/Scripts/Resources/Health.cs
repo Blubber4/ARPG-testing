@@ -61,7 +61,7 @@ namespace RPG.Resources
             return maxHealth;
         }
 
-        // animation event
+        // animation event triggered by unity, not in code (other than on reload)
         private void Die()
         {
             if (isDead) return;
@@ -77,7 +77,7 @@ namespace RPG.Resources
             Rigidbody rigidBody = GetComponent<Rigidbody>();
             if (rigidBody != null)
             {
-                rigidBody.velocity = new Vector3(0, 0, 0); // to stop rare sliding glitches, will need to change later if add any kind of intentional ragdoll effects.
+                rigidBody.velocity = new Vector3(0, 0, 0); // to stop rare sliding glitches, will need to change later if add any kind of intentional ragdoll effects are added.
                 rigidBody.isKinematic = false;
                 rigidBody.detectCollisions = false;
             }

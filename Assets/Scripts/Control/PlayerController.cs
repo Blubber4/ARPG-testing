@@ -13,7 +13,7 @@ namespace RPG.Control
         Fighter playerFighter;
 
         bool isAttackMove;
-        bool isFirstClick; // for checking first click of an attack move, so we can avoid all clicks initiating a new attack move when one just needs to finish
+        bool isFirstClick; // for checking first click of an attack move, to avoid all clicks initiating a new attack
         Vector3 attackMovePosition;
 
         private void Awake()

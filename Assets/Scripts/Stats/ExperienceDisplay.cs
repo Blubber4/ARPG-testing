@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace RPG.Stats
 {
-    /* with some simple adjustment could use HealthDisplay code here to allow modes.
+    /* with some simple adjustment could reuse HealthDisplay code here to allow modes.
        I think I prefer this instead for experience, but maybe being able to hide it would be good? */
     public class ExperienceDisplay : MonoBehaviour 
     {

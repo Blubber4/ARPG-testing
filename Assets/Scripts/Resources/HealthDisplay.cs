@@ -18,7 +18,7 @@ namespace RPG.Resources
         protected Text healthText;
 
         [SerializeField] DisplayMode displayMode = DisplayMode.AsValue;
-        //DisplayMode oldDisplayMode;  ***** commented out code is for when health bar is implemented, so player can have option of disabling/enabling text *****
+        //DisplayMode oldDisplayMode;  ***** commented out code in this file is for when health bar is implemented, so player can have option of disabling/enabling text *****
 
         protected virtual void Update()
         {
